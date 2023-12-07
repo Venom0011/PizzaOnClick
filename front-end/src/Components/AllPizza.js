@@ -2,7 +2,7 @@ import React from 'react'
 
 function AllPizza() {
   return (
-    <div>AllPizza</div>
+    <div>Hello</div>
   )
 }
 

@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Components/Navbar'
+import Home from './Components/Home'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import AllPizza from './Components/AllPizza'
+import PizzaDetails from './Components/PizzaDetails'
+import { Container } from 'reactstrap';
+import {Routes,Route,BrowserRouter as Router} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Navbar></Navbar>
+    
+      <Routes>
+        <Route exact path='/' element={<Home></Home>}></Route>
+        <Route exact path='/home' element={<Home></Home>}></Route>
+        <Route exact path='/about' element={<About></About>}></Route>
+        <Route exact path='/contact' element={<Contact></Contact>}></Route>
+        <Route exact path='/pizza' element={<AllPizza></AllPizza>}></Route>
+        <Route exact path='/pizza/:id' element={<PizzaDetails></PizzaDetails>}></Route>
+        
+      </Routes>
+      </Router>
+    </>
   );
 }
 

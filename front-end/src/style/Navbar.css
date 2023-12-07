@@ -24,7 +24,7 @@
     text-decoration: none;
     color: unset;
 }
-.menu a:hover{
+.menu ul a:hover{
     color: #df2020;
 }
 .active__menu{
