@@ -11,9 +11,8 @@ import {Routes,Route,BrowserRouter as Router} from 'react-router-dom'
 function App() {
   return (
     <>
-    <Router>
       <Navbar></Navbar>
-    
+  
       <Routes>
         <Route exact path='/' element={<Home></Home>}></Route>
         <Route exact path='/home' element={<Home></Home>}></Route>
@@ -21,9 +20,7 @@ function App() {
         <Route exact path='/contact' element={<Contact></Contact>}></Route>
         <Route exact path='/pizza' element={<AllPizza></AllPizza>}></Route>
         <Route exact path='/pizza/:id' element={<PizzaDetails></PizzaDetails>}></Route>
-        
       </Routes>
-      </Router>
     </>
   );
 }
