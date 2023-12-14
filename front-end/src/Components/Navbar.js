@@ -7,13 +7,13 @@ import '../style/Navbar.css';
 function Navbar() {
   return (
     <>
-      <div className="row" style={{width:'80%',margin:'auto'}}>
+      <div className="row my-3" style={{width:'80%',margin:'auto'}}>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           {/* Left Icons */}
-          <div className="col-md-3 ">
+          <div className="col-md-3">
             <div className="logo">
-              <img src={Logo} alt="Logo not found" />
-              <h5 className='mx-2'>PizzaOnClick</h5>
+              <img src={Logo} alt="Logo not found" className='logo-img' />
+              <h5 style={{marginLeft:'10'}}>PizzaOnClick</h5>
             </div>
           </div>
 

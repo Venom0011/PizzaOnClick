@@ -9,9 +9,11 @@
 }
 .logo{
     text-align: left;
+    
 }
 .logo img{
-    width: calc(100%-60%);
+    height: 50px;
+    margin-left: 25px;
     object-fit: contain;
 }
 .logo h5{

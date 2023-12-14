@@ -1,0 +1,9 @@
+.social__links a{
+    text-decoration: none;
+    color: unset;
+}
+.logo-img{
+    height: 50px;
+    margin-left: 50px;
+
+}
