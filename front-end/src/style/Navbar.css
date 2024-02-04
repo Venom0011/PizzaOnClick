@@ -1,17 +1,21 @@
-.body{
-    overflow-x: hidden;
-}
+* {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
 
-.header{
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-}
-.logo{
-    text-align: left;
-    
-}
-.logo img{
+/* .body{
+    overflow-x: hidden;
+} */
+
+
+
+/* .logo img{
     height: 50px;
     margin-left: 25px;
     object-fit: contain;
@@ -20,7 +24,6 @@
     font-weight: 600;
     font-size: 1rem;
     color: #212245;
-    /* margin-top: -10px; */
     margin-bottom: 0;
     text-align: left;
 }
@@ -36,7 +39,7 @@
 }
 .active__menu{
     color: #df2020;
-}
+} */
 .cart__icon i,.user i,.mobile__menu i{
     font-size: 1.3rem;
     color: #212245;
@@ -68,11 +71,103 @@
     display: none;
 }
 
-@media only screen and (max-width:992px) {
-    .logo img{
-        width: calc(100%-70%);
-    }
-    logo h5{
-        font-size: 0.9rem;
-    }
+
+.main-nav{
+    width: 100%;
+    height: 10rem;
+    /* making display grid */
+    display: grid;
+    /* dividing the complete navbar into 5 column grid */
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    /* 10rem =1000 px space from both let and right 
+       1 fraction unit space for logo
+       2 fraction space for nav_link 
+       1 fraction space for right_icon
+    */
+  
 }
+/* after doinign this logo is in 10rem space and the rest item following him */
+.logo{
+
+    /* this will shift the logo to 2 colum and end it in 3 column 
+    And also shift other layouts by 1 column
+    */
+    grid-column: 2/3;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+}
+.logo-text{
+    margin-top: -72px;
+    margin-left: 5px;
+}
+.menu-link{
+    grid-column: 3/4;
+}
+.menu-link ul{
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.menu-link ul li{
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-link ul li:hover{
+    color: #df2020;
+}
+
+.nav-right{
+    grid-column: 4/5;
+}
+
+.nav-right ul{
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mobile-menu{
+    display: none;
+}
+/* @media screen and (max-width:768px) {
+    .menu-link ,.nav-right {
+        display: flex;
+        flex-direction: column;
+        grid-column: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+       
+      }
+    
+      .menu-link ul {
+         height: auto; 
+        flex-direction: column;
+        align-items: flex-start;
+
+        justify-content: flex-start; 
+        position: absolute;
+        top: 90px;
+        right: 0px;
+        width: 300px;
+        height: 100vh;
+        background-color: #df2020; 
+        
+       
+        
+    }
+    .nav-right ul{
+        flex-direction: column;
+        align-items: flex-start;
+        left: 370px;
+        justify-content: flex-start; 
+        position: absolute;
+        top: 200px;
+    }
+} */
+

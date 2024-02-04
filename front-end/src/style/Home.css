@@ -48,3 +48,27 @@
     color: #fff;
     border-radius: 50%;
 }
+
+/* @media (max-width: 670px) {
+    section {
+      text-align: center; 
+    }
+  
+    .hero__content {
+      position: relative;
+      left: 0;
+      bottom: 0;
+    }
+  
+    .hero__buttons {
+      flex-direction: column;
+    }
+  
+    .hero-img {
+      width: 100%; 
+    }
+  
+    .hero__service {
+      flex-direction: column; 
+    }
+  } */

@@ -6,7 +6,8 @@ function Footer() {
   // Timestap 55 min
   return (
    <>
-   <div className="container">
+   <footer className='footer'>
+   <div className="container w-auto" >
       <div className="row">
         <div className="col-md-4 col-sm-6 col-lg-3">
         <img src={Logo} alt="Logo not found" className='logo-img'/>
@@ -14,49 +15,51 @@ function Footer() {
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis repudiandae.</p>
         </div>
         <div className="col-md-4 col-sm-6 col-lg-3">
-            <h5>Delivery Time</h5>
+            <h5 className='footer-title'>Delivery Time</h5>
             <div className="list-group ps-0">
-              <div className="list-item">
+              <div className="list-item delivery-items">
                 <span>Monday-Friday</span>
                 <p>10:00am -6:30pm </p>
               </div>
-              <div className="list-item ps-0">
+              <div className="list-item ps-0 delivery-items">
                 <span>Saturday-Sunday</span>
                 <p>Off Day </p>
               </div>
             </div>
         </div>
         <div className="col-md-4 col-sm-6 col-lg-3">
-          <h5>Contact</h5>
+          <h5 className='footer-title'>Contact</h5>
           <div className="list-group">
-          <div className="list-item">
+          <div className="list-item contact">
                 <p>Location: JijaMata Chowk, Akurdi,Pune</p>
               </div>
 
-          <div className="list-item">
+          <div className="list-item contact">
                 <p>Phone: 99999999</p>
               </div>
-              <div className="list-item">
+              <div className="list-item contact">
                 <span>email: example@gmail.com</span>
               </div>
               </div>
         </div>
 
-        <div className="col-md-4 col-sm-6 col-lg-3">
-          <h5>NewsLetter</h5>
-          <p>Subscribe to our newsletter</p>
+        <div className=" col-md-4 col-sm-6 col-lg-3">
+          <h5 className='footer-title'>NewsLetter</h5>
+          <p className='subscribe'>Subscribe to our newsletter</p>
+          <div className="newsletter">
           <input type="email" placeholder='Enter you email'/>
           <span>
           <i className="ri-send-plane-fill"></i>
           </span>
+          </div>
         </div>
       </div>
       <div className="row mt-5">
-      <div className="col-lg-6 col-md-6">
-          <p>Copyright-2023 &copy; Website Made by Abhishek Mahajan and Hrushikesh Turkane.<br></br>All rights reserved.</p>
+      <div className="col-lg-6 col-md-6 copy-text">
+          <p>Copyright-2023 &copy; All rights reserved.</p>
         </div>
         <div className="col-lg-6 col-md-6">
-        <div className="social__links d-flex align-items-center gap-4 justify-content-end">
+        <div className="social-links d-flex align-items-center gap-4 justify-content-end">
           <p className='m-0'>Follow</p>
           <span><Link to=''><i className="ri-github-fill"></i></Link></span>
 
@@ -68,6 +71,7 @@ function Footer() {
 
       </div>
    </div>
+   </footer>
    </>
   )
 }

@@ -22,7 +22,7 @@ function App() {
         <Route exact path='/pizza/:id' element={<PizzaDetails></PizzaDetails>}></Route>
       </Routes>
 
-      <Footer></Footer>
+    
 
     </>
   );

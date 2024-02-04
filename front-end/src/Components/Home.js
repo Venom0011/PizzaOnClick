@@ -2,9 +2,14 @@ import React from 'react'
 import animation from '../assests/images/hero.png'
 import '../style/Home.css'
 import { Link } from 'react-router-dom'
+import AllPizza from './AllPizza'
+import Footer from './Footer'
+import About from './About'
 function Home() {
   
   return (
+    <>
+   {/* Intro of home */}
     <section>
       <div className="container">
       <div className="row">
@@ -28,7 +33,7 @@ function Home() {
         
         </div>
         <div className="col-md-6 col-lg-6">
-          <div className="hero__content" style={{position:'relative',left:'20%', bottom:'10%'}}>
+          <div className="hero__content" style={{position:'relative',left:'15%', bottom:'10%'}}>
           <img src={animation} alt="not found" className='hero-img w-75' />
           </div>
         </div>
@@ -38,6 +43,17 @@ function Home() {
       </div>
       </div>
     </section>
+
+{/*  */}
+<section>
+      <AllPizza></AllPizza>
+</section>
+
+<section>
+      <About></About>
+</section>
+<Footer></Footer>
+    </>
   )
 }
 
