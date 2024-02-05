@@ -3,16 +3,16 @@ package com.app.services;
 import java.util.List;
 
 import com.app.dto.ApiResponse;
-import com.app.dto.UserRespDTO;
+import com.app.dto.UserRespDto;
 
 
 public interface UserService {
 
-	UserRespDTO addUser(UserRespDTO user);
+	UserRespDto addUser(UserRespDto user);
 	
-	List<UserRespDTO> getAllUsers();
+	List<UserRespDto> getAllUsers();
 	
 	ApiResponse deleteUser(Integer userId);
 	
-	UserRespDTO updateUser(Integer userId,UserRespDTO userdto);
+	UserRespDto updateUser(Integer userId,UserRespDto userdto);
 }

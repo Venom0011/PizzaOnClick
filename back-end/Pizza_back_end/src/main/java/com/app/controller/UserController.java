@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.dto.UserRespDTO;
+import com.app.dto.UserRespDto;
 import com.app.services.UserService;
 
 @RestController
@@ -23,7 +23,7 @@ public class UserController {
 	UserService userservice;
 
 	@PostMapping
-	public ResponseEntity<?> addNewUser(@RequestBody UserRespDTO userdto) {
+	public ResponseEntity<?> addNewUser(@RequestBody UserRespDto userdto) {
 		return ResponseEntity.ok(userservice.addUser(userdto));
 	}
 
@@ -43,7 +43,7 @@ public class UserController {
 	}
 
 	@PutMapping("/{userId}")
-	public ResponseEntity<?> updateUser(@PathVariable Integer userId, @RequestBody UserRespDTO dto) {
+	public ResponseEntity<?> updateUser(@PathVariable Integer userId, @RequestBody UserRespDto dto) {
 		try {
 			return ResponseEntity.ok(userservice.updateUser(userId, dto));
 		} catch (RuntimeException e) {

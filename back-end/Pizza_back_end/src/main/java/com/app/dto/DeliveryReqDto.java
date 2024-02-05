@@ -11,7 +11,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class DeliveryRespDto {
+public class DeliveryReqDto {
 
 private String deliveredBy;
 	
@@ -21,5 +21,4 @@ private String deliveredBy;
 	
 	private Status deliveryStatus;
 	
-	private PaymentRespDto payment;
 }

@@ -21,7 +21,7 @@ public class PaymentRespDto {
 	
 	private Status paymentStatus;
 	
-	private UserRespDTO user;
+	private UserRespDto user;
 
 	private OrderRespDto order;
 }

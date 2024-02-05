@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.app.custom_exp.CustomExp;
 import com.app.dao.UserDao;
 import com.app.dto.ApiResponse;
-import com.app.dto.UserRespDTO;
+import com.app.dto.UserRespDto;
 import com.app.pojos.User;
 
 @Service
@@ -26,16 +26,16 @@ public class UserServiceImpl implements UserService {
 	ModelMapper mapper;
 
 	@Override
-	public UserRespDTO addUser(UserRespDTO userdto) {
+	public UserRespDto addUser(UserRespDto userdto) {
 
 		User user = mapper.map(userdto, User.class);
 		user = userdao.save(user);
-		return mapper.map(user, UserRespDTO.class);
+		return mapper.map(user, UserRespDto.class);
 	}
 
 	@Override
-	public List<UserRespDTO> getAllUsers() {
-		return userdao.findAll().stream().map(e -> mapper.map(e, UserRespDTO.class)).collect(Collectors.toList());
+	public List<UserRespDto> getAllUsers() {
+		return userdao.findAll().stream().map(e -> mapper.map(e, UserRespDto.class)).collect(Collectors.toList());
 	}
 
 	@Override
@@ -50,12 +50,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public UserRespDTO updateUser(Integer userId, UserRespDTO userdto) {
+	public UserRespDto updateUser(Integer userId, UserRespDto userdto) {
 
 		User user = userdao.findById(userId).orElseThrow(() -> new CustomExp("Id not exists"));
 		mapper.map(userdto, user);
 		userdao.save(user);
-		return mapper.map(user, UserRespDTO.class);
+		return mapper.map(user, UserRespDto.class);
 	}
 
 }

@@ -6,8 +6,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -31,11 +29,12 @@ public class Pizza extends BaseEntity {
 	@OneToMany(mappedBy = "pizza",orphanRemoval = true,cascade = CascadeType.ALL)
 	private List<Topping> topping=new ArrayList<>();
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "order_id")
-	private Order order;
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@JoinColumn(name = "order_id")
+//	private Order order;
 	
-	
+	@OneToMany(mappedBy = "pizza",orphanRemoval = true,cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	List<Order> order=new ArrayList<>();
 	
 //	Helper methods
 	
@@ -47,5 +46,15 @@ public class Pizza extends BaseEntity {
 	public void removeTopping(Topping topping) {
 		this.topping.remove(topping);
 		topping.setPizza(null);
+	}
+	
+	public void addOrder(Order order) {
+		this.order.add(order);
+		order.setPizza(this);
+	}
+	
+	public void removeOrder(Order order) {
+		this.order.remove(order);
+		order.setPizza(null);
 	}
 }

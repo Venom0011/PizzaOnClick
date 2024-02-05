@@ -11,4 +11,6 @@ public interface PaymentService {
 	 List<PaymentRespDto> getAllPaymentWithUSer(Integer userId);
 	
 	 ApiResponse makePayment(Integer orderId,Integer userId,PaymentReqDto paydto);
+	 
+	 List<PaymentRespDto> getAllPayments();
 }

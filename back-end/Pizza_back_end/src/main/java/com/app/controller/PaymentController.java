@@ -20,6 +20,12 @@ public class PaymentController {
 	@Autowired
 	private PaymentService payservice;
 	
+	
+	@GetMapping
+	public ResponseEntity<?> getAllPayments(){
+		return ResponseEntity.ok(payservice.getAllPayments());
+	}
+	
 	@GetMapping("/{userId}")
 	public ResponseEntity<?> getAllPaymentsWithUser(@PathVariable Integer userId){
 		return ResponseEntity.ok(payservice.getAllPaymentWithUSer(userId));

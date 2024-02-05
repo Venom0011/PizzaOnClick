@@ -1,17 +1,13 @@
 package com.app.pojos;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -42,21 +38,25 @@ public class Order extends BaseEntity{
 	@JoinColumn(name = "user_id")
 	private User user;
 	
-	@OneToMany(mappedBy = "order",orphanRemoval = true,cascade = CascadeType.ALL,fetch = FetchType.EAGER )
-	List<Pizza> pizza=new ArrayList<>();
+//	@OneToMany(mappedBy = "order",orphanRemoval = true,cascade = CascadeType.ALL,fetch = FetchType.EAGER )
+//	List<Pizza> pizza=new ArrayList<>();
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "pizza_id")
+	private Pizza pizza;
 
 
 //	Helper Methods
 
-	public void addPizza(Pizza pizza) {
-		this.pizza.add(pizza);
-		pizza.setOrder(this);
-	}
-	
-	public void removePizza(Pizza pizza) {
-		this.pizza.remove(pizza);
-		pizza.setOrder(null);
-	}
+//	public void addPizza(Pizza pizza) {
+//		this.pizza.add(pizza);
+//		pizza.setOrder(this);
+//	}
+//	
+//	public void removePizza(Pizza pizza) {
+//		this.pizza.remove(pizza);
+//		pizza.setOrder(null);
+//	}
 	
 //	Overrided methods	
 	

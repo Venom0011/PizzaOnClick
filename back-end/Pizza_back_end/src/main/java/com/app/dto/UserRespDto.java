@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class UserRespDTO {
+public class UserRespDto {
 
 	
 	private String name;

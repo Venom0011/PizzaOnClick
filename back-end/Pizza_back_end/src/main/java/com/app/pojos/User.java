@@ -10,6 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.ColumnDefault;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,7 +26,8 @@ public class User extends BaseEntity {
 	@Column(length = 50,nullable = false)
 	private String name;
 	
-	@Column(columnDefinition = "default='Customer'")
+//	@Column(columnDefinition = "default='Customer'")
+	
 	private String Role;
 	
 	@Column(length = 12)
