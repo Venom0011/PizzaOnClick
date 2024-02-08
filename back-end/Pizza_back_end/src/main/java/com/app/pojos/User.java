@@ -70,7 +70,7 @@ public class User extends BaseEntity {
 		order.setUser(this);
 	}
 	
-	public void removePayment(Order order) {
+	public void removeOrder(Order order) {
 		this.order.remove(order);
 		order.setUser(null);
 	}

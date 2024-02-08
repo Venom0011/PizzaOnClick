@@ -62,6 +62,8 @@ public class DeliveryServicesImpl implements DeliveryServices{
 	@Override
 	public ApiResponse issueDelivery(Integer id, DeliveryReqDto delreqdto) {
 		Payment payment=paydao.findById(id).orElseThrow(()->new CustomExp("Payment not done yet"));
+		Delivery deli=deldao.findById(id).orElseThrow();
+		if(deli==null) {
 		Delivery del=mapper.map(delreqdto, Delivery.class);
 		del.setDeliveredBy(delreqdto.getDeliveredBy());
 		del.setDeliveryDesc(delreqdto.getDeliveryDesc());
@@ -70,6 +72,8 @@ public class DeliveryServicesImpl implements DeliveryServices{
 		del.setPayment(payment);
 		deldao.save(del);
 		return new ApiResponse("Delivery Successfull");
+		}
+		return new ApiResponse("Already Delivered");
 	}
 
 	

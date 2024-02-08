@@ -1,149 +1,76 @@
-import React, { useState } from 'react';
-import { Container } from 'reactstrap';
+import React from 'react';
 import Logo from '../assests/images/res-logo.png';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../style/Navbar.css';
 
-function sample(){
-  <div className="row my-3" style={{width:'80%',margin:'auto'}}>
-  <div className="nav__wrapper d-flex align-items-center justify-content-between">
-    {/* Left Icons */}
-    <div className="col-md-3">
-      <div className="logo">
-        <img src={Logo} alt="Logo not found" className='logo-img' />
-        <h5 style={{marginLeft:'10'}}>PizzaOnClick</h5>
-      </div>
-    </div>
-{/* continue from 25min */}
-    {/* Middle Icons */}
-    <div className="col-md-6">
-      <div className="navbar justify-content-center">
-        <div className="menu">
-          <ul className="list-unstyled d-flex align-items-center gap-3">
-            <li>
-              <NavLink className="nav-link" to={"/home"}>
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to={"/about"}>
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to={"/deals"}>
-                Deals
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to={"/pizza"}>
-                Pizza
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    {/* Right Icons */}
-    <div className="col-md-3">
-      <div className="nav__right d-flex align-items-center justify-content-end gap-4">
-        <span className="cart__icon">
-          <i className="ri-shopping-cart-2-line"></i>
-          <span className="cart__badge">2</span>
-        </span>
-        <span className="user">
-          <Link to="/Login">
-            <i className="ri-user-line"></i>
-          </Link>
-        </span>
-        <span className="mobile__menu">
-          <i className="ri-menu-line"></i>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-}
 
 
 function Navbar() {
-  const[state,setstate]=useState({clicked:false});
-
-  // function to toggle the state of hamburger and close
- const handleClick=()=>{
-  setstate({clicked:!state.clicked})
- }
-
+  
   return (
     <>
-     <nav className="main-nav">
-      {/* Logo part */}
-      
-        <div className="logo">
-        <img src={Logo} alt="Logo not found" className='logo-img' />
+      <nav className="navbar navbar-expand-lg bg-light">
+  <div className="container py-3">
+  <NavLink to='/home' className="navbar-brand">
+      <img src={Logo} alt="Logo" width="30" height="30" className="d-inline-block align-text-top mx-2"/>
+      PizzaOnClick
+    </NavLink>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav  me-auto mb-2 mb-lg-0 align-items-center mx-auto nav_ul">
         
-        <div className='logo-text'>
-        <h5>
-          <span>P</span>izza<span>O</span>n<span>C</span>lick
-          </h5>
-          </div>
-        </div>
-        {/* menu links */}
-        <div className="menu-link">
-          <ul>
-        <li>
-              <NavLink className="nav-link" to={"/home"}>
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to={"/about"}>
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to={"/deals"}>
-                Deals
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to={"/pizza"}>
-                Pizza
-              </NavLink>
-            </li>
-            </ul>
-        </div>
+        <li className="nav-item">
+          <NavLink to='/home' className="nav-link">Home</NavLink>
+        </li>
+        
+        <li className="nav-item">
+          <NavLink to='/about' className="nav-link">About</NavLink>
+        </li>
+        
+        <li className="nav-item">
+          <NavLink  to='/pizza' className="nav-link">Pizza</NavLink>
+        </li>
 
+        <li className="nav-item dropdown">
+          <nav className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <span style={{"fontWeight":"500"}}> Deals </span>
+          </nav>
+          <ul className="dropdown-menu">
+            <li><NavLink to='/deals' className="nav-link dropdown-item" >Bulk Order</NavLink></li>
 
-        {/* 3rd part of navbar */}
-            <div className="nav-right">
-            <ul>
-              <li>
-              <span className="cart__icon">
-          <i className="ri-shopping-cart-2-line"></i>
-          <span className="cart__badge">2</span>
-        </span>
-              </li>
-              <li>
-              <span className="user">
-          <Link to="/Login">
-            <i className="ri-user-line"></i>
-          </Link>
-        </span>
-              </li>
-
-              <li>
-              <span className="mobile-menu" onClick={handleClick}>
-                {/* dynamically loading the hamburger and close button */}
-                <i className={state.clicked ? "ri-close-line"  : "ri-align-justify"}></i>
-        </span>
-              </li>
-            </ul>
-           
-            </div>
-
-     </nav>
+          </ul>
+        </li> 
+        <li className="nav-item">
+          <NavLink  to='/pizza' className="nav-link">Contact Us</NavLink>
+        </li>
+      </ul>
+    </div>
+    
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center ms-auto nav_icons">
+        <li className="nav-item">
+        <NavLink to='/cart' className='nav-link'>
+          <span className='shopping_cart' style={{"fontWeight":"500"}}>
+          Cart
+        <i className="ri-shopping-cart-2-line"></i>
+          </span>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to='/login' className='nav-link'>
+          <span className='user_login' style={{"fontWeight":"500"}}>
+            Login
+        <i className="ri-user-line"></i>
+          </span>
+          </NavLink>
+        </li>
+      </ul>
+      </div>
+  </div>
+</nav>
     </>
   );
 }

@@ -4,6 +4,7 @@ import aboutImg from '../assests/images/location.png'
 function About() {
   return (
     <>
+    
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-6 ">
@@ -16,17 +17,17 @@ function About() {
         <div className="list-group">
 
           <div className="list-item">
-          <p className='item-icon d-flex align-items-center gap-2'><i class="ri-checkbox-circle-line"></i>Fresh and tasty food</p>
+          <p className='item-icon d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>Fresh and tasty food</p>
           <p className='item-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, possimus?</p>
           </div>
 
           <div className="list-item">
-          <p className='item-icon d-flex align-items-center gap-2'><i class="ri-checkbox-circle-line"></i>Quality food</p>
+          <p className='item-icon d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>Quality food</p>
           <p className='item-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, possimus?</p>
           </div>
 
           <div className="list-item">
-          <p className='item-icon d-flex align-items-center gap-2'><i class="ri-checkbox-circle-line"></i>Fast delivery</p>
+          <p className='item-icon d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>Fast delivery</p>
           <p className='item-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, possimus?</p>
           </div>
       </div>

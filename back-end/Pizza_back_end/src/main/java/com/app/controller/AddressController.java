@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,11 +39,24 @@ public class AddressController {
 		return ResponseEntity.ok(add);
 	}
 	
-	@PutMapping
-	public ResponseEntity<?> UpdateAddress(@RequestBody AddressReqDto dto){
-		AddressReqDto add=addserice.addAddress(dto);;
+	@PutMapping("/{addressid}")
+	public ResponseEntity<?> updateAddress(@PathVariable Integer addressid,@RequestBody AddressReqDto dto){
+		AddressReqDto add=addserice.updateAddress(addressid,dto);;
 		if(add==null) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No adddess found..");
 		return ResponseEntity.ok(add);
+	}
+	
+	@PostMapping("/{userid}")
+	public ResponseEntity<?> addAddress(@PathVariable Integer userid, @RequestBody AddressReqDto dto){
+		AddressReqDto add=addserice.addAddress(userid,dto);
+		if(add==null) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Address must not be empty");
+		return ResponseEntity.ok(add);
+	}
+	
+	
+	@DeleteMapping("/{addressid}")
+	public ResponseEntity<?> deleteAddress(@PathVariable Integer addressid){
+		return ResponseEntity.ok(addserice.deleteAddress(addressid));
 	}
 
 }

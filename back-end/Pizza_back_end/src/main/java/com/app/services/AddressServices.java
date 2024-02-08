@@ -12,9 +12,9 @@ public interface AddressServices {
 	
 	AddressRespDto getAddressByUser(Integer userid);
 	
-	AddressReqDto addAddress(AddressReqDto dto);
+	AddressReqDto addAddress(Integer userid,AddressReqDto dto);
 	
-	AddressReqDto updateAddress(AddressReqDto dto);
+	AddressReqDto updateAddress(Integer addressid,AddressReqDto dto);
 	
 	ApiResponse deleteAddress(Integer addressid);
 	

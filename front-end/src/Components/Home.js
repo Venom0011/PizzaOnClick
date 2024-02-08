@@ -9,6 +9,9 @@ function Home() {
   
   return (
     <>
+
+    
+
    {/* Intro of home */}
     <section>
       <div className="container">
@@ -22,13 +25,13 @@ function Home() {
           <p>Order - Wait - Chill</p>
           
           <div className='hero__buttons d-flex align-items-center gap-5 mt-4'>
-            <button className='order__btn d-flex align-items-center justify-content-between'> Oder now <i class="ri-arrow-right-s-line"></i></button>
+            <button className='order__btn d-flex align-items-center justify-content-between'> Oder now <i className="ri-arrow-right-s-line"></i></button>
             <button className='pizza__btn'><Link to='/pizza'>See all Pizza</Link></button>
         </div>
         </div>
         <div className='hero__service d-flex align-items-center gap-5 mt-5'>
-          <p className=' d-flex align-items-center gap-2'><span className='ship__icon'><i class="ri-car-line"></i></span>No Shipping Charges</p>
-          <p className='d-flex align-items-center gap-2'><span className='ship__icon'><i class="ri-shield-check-line"></i></span>Secure Checkout</p>
+          <p className=' d-flex align-items-center gap-2'><span className='ship__icon'><i className="ri-car-line"></i></span>No Shipping Charges</p>
+          <p className='d-flex align-items-center gap-2'><span className='ship__icon'><i className="ri-shield-check-line"></i></span>Secure Checkout</p>
         </div>
         
         </div>

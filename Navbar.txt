@@ -1,0 +1,259 @@
+ <div className="main-nav">
+    
+     <div className="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      {/* Logo part */}
+      
+        <div className="logo">
+        <img src={Logo} alt="Logo not found" className='logo-img' />
+        
+        <div className='logo-text'>
+        <h5>
+          <span>P</span>izza<span>O</span>n<span>C</span>lick
+          </h5>
+          </div>
+        </div>
+
+       
+
+        {/* menu links */}
+        <div className="menu-link">
+          <ul>
+        <li>
+              <NavLink className="nav-link" to={"/home"}>
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={"/about"}>
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={"/deals"}>
+                Deals
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={"/pizza"}>
+                Pizza
+              </NavLink>
+            </li>
+            </ul>
+        </div>
+
+
+        {/* 3rd part of navbar */}
+            <div className="nav-right">
+            <ul>
+              <li>
+              <span className="cart__icon">
+          <i className="ri-shopping-cart-2-line"></i>
+          <span className="cart__badge">2</span>
+        </span>
+              </li>
+              <li>
+              <span className="user">
+          <Link to="/Login">
+            <i className="ri-user-line"></i>
+          </Link>
+        </span>
+              </li>
+
+              
+            </ul>
+           
+            </div>
+
+     </div>
+
+
+------------------------------------------------
+* {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+
+/* .body{
+    overflow-x: hidden;
+} */
+
+
+
+/* .logo img{
+    height: 50px;
+    margin-left: 25px;
+    object-fit: contain;
+}
+.logo h5{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212245;
+    margin-bottom: 0;
+    text-align: left;
+}
+.menu a{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212245;
+    text-decoration: none;
+    color: unset;
+}
+.menu ul a:hover{
+    color: #df2020;
+}
+.active__menu{
+    color: #df2020;
+} */
+.cart__icon i,.user i,.mobile__menu i{
+    font-size: 1.3rem;
+    color: #212245;
+    cursor: pointer;
+
+}
+
+.cart__icon{
+    position: relative;
+}
+.cart__badge{
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    background: #df2020;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile__menu{
+    font-size: 600;
+    display: none;
+}
+
+
+.main-nav{
+    width: 100%;
+    height: 10rem;
+    /* making display grid */
+    display: grid;
+    /* dividing the complete navbar into 5 column grid */
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    /* 10rem =1000 px space from both let and right 
+       1 fraction unit space for logo
+       2 fraction space for nav_link 
+       1 fraction space for right_icon
+    */
+  
+}
+/* after doinign this logo is in 10rem space and the rest item following him */
+.logo{
+
+    /* this will shift the logo to 2 colum and end it in 3 column 
+    And also shift other layouts by 1 column
+    */
+    grid-column: 2/3;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+}
+.logo-text{
+    margin-top: -72px;
+    margin-left: 5px;
+}
+.menu-link{
+    grid-column: 3/4;
+}
+.menu-link ul{
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.menu-link ul li{
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-link ul li:hover{
+    color: #df2020;
+}
+
+.nav-right{
+    grid-column: 4/5;
+}
+
+.nav-right ul{
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media (max-width:680px){
+
+.main-nav.menu{
+    display:  flex;
+}
+.main-nav{
+    flex-direction: column;
+    align-items: start;
+}
+}
+/* @media screen and (max-width:768px) {
+    .menu-link ,.nav-right {
+        display: flex;
+        flex-direction: column;
+        grid-column: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+       
+      }
+    
+      .menu-link ul {
+         height: auto; 
+        flex-direction: column;
+        align-items: flex-start;
+
+        justify-content: flex-start; 
+        position: absolute;
+        top: 90px;
+        right: 0px;
+        width: 300px;
+        height: 100vh;
+        background-color: #df2020; 
+        
+       
+        
+    }
+    .nav-right ul{
+        flex-direction: column;
+        align-items: flex-start;
+        left: 370px;
+        justify-content: flex-start; 
+        position: absolute;
+        top: 200px;
+    }
+} */
+

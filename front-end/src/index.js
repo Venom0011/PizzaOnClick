@@ -5,15 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'remixicon/fonts/remixicon.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
+import 'bootstrap/dist/js/bootstrap.js';
+import axios from 'axios';
+
+axios.defaults.baseURL='http://localhost:8080/pizzaonclick';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
     <App />
     
-    </BrowserRouter>
+   
   </React.StrictMode>
 );
 

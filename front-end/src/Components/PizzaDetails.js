@@ -2,7 +2,9 @@ import React from 'react'
 
 function PizzaDetails() {
   return (
-    <div>PizzaDetails</div>
+    <div>
+      
+      PizzaDetails</div>
   )
 }
 

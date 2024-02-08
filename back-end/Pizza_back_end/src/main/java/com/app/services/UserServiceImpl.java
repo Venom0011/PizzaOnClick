@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.app.custom_exp.CustomExp;
 import com.app.dao.UserDao;
 import com.app.dto.ApiResponse;
+import com.app.dto.UserReqDto;
 import com.app.dto.UserRespDto;
 import com.app.pojos.User;
 
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
 	ModelMapper mapper;
 
 	@Override
-	public UserRespDto addUser(UserRespDto userdto) {
+	public UserRespDto addUser(UserReqDto userdto) {
 
 		User user = mapper.map(userdto, User.class);
 		user = userdao.save(user);

@@ -1,7 +1,5 @@
 package com.app.dto;
 
-import java.time.LocalDate;
-
 import com.app.pojos.Status;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

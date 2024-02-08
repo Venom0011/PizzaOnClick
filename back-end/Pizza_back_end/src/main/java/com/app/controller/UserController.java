@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.dto.UserReqDto;
 import com.app.dto.UserRespDto;
 import com.app.services.UserService;
 
@@ -23,7 +24,7 @@ public class UserController {
 	UserService userservice;
 
 	@PostMapping
-	public ResponseEntity<?> addNewUser(@RequestBody UserRespDto userdto) {
+	public ResponseEntity<?> addNewUser(@RequestBody UserReqDto userdto) {
 		return ResponseEntity.ok(userservice.addUser(userdto));
 	}
 

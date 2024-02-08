@@ -13,13 +13,15 @@ import lombok.ToString;
 @ToString
 public class DeliveryRespDto {
 
-private String deliveredBy;
+	private Integer Id;
 	
+	private String deliveredBy;
+
 	private String deliveryDesc;
-	
+
 	private LocalDate deliveryTime;
-	
+
 	private Status deliveryStatus;
-	
+
 	private PaymentRespDto payment;
 }

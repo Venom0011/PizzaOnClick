@@ -2,14 +2,10 @@ package com.app.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
-public class UserRespDto {
-	
-	private Integer id; 
+public class UserReqDto {
 	
 	private String name;
 	
@@ -17,7 +13,5 @@ public class UserRespDto {
 	
 	private String email;
 	
-	private String Role;
-	
-	
+	private String password;
 }

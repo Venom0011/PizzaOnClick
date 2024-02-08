@@ -16,4 +16,6 @@ public class AddressReqDto {
 	private String country;
 	
 	private int pincode;
+	
+	
 }

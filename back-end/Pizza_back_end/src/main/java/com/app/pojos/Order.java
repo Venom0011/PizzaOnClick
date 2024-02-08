@@ -26,8 +26,6 @@ public class Order extends BaseEntity{
 	
 	//how to display date and time differently eg= :date=2023-01-01 time:12:00
 	private LocalDate orderDate;
-	
-	private LocalDate deliveryDate;
 		
 	private double orderprice;
 	
@@ -62,7 +60,7 @@ public class Order extends BaseEntity{
 	
 	@Override
 	public String toString() {
-		return "Order [orderDate=" + orderDate + ", deliveryDate=" + deliveryDate + ", orderStatus=" + orderStatus
+		return "Order [orderDate=" + orderDate +   ", orderStatus=" + orderStatus
 				+ ", orderprice=" + orderprice + "]";
 	}
 		

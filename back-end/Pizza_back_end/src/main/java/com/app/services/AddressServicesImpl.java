@@ -45,15 +45,18 @@ public class AddressServicesImpl implements AddressServices {
 	}
 
 	@Override
-	public AddressReqDto addAddress(AddressReqDto dto) {
+	public AddressReqDto addAddress(Integer userid,AddressReqDto dto) {
+		User user= userdao.findById(userid).orElseThrow(()->new CustomExp("User not exists"));
 		Address add=mapper.map(dto, Address.class);
+		add.setUser(user);
 		addressdao.save(add);
 		return mapper.map(add, AddressReqDto.class);
 	}
 
 	@Override
-	public AddressReqDto updateAddress(AddressReqDto dto) {
-		Address add=mapper.map(dto, Address.class);
+	public AddressReqDto updateAddress(Integer addressid,AddressReqDto dto) {
+		Address add=addressdao.findById(addressid).orElseThrow(()->new CustomExp("Address not found for user"));
+		mapper.map(dto, add);
 		addressdao.save(add);
 		return mapper.map(add, AddressReqDto.class);
 	}

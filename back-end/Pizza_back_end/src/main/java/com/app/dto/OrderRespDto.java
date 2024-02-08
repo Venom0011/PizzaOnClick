@@ -13,8 +13,6 @@ public class OrderRespDto {
 
 	private LocalDate orderDate;
 
-	private LocalDate deliveryDate;
-
 	private double orderprice;
 
 	private Status orderStatus;

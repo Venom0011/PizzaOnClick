@@ -4,6 +4,7 @@ import "../style/AllPizza.css";
 function AllPizza() {
   return (
     <>
+    
       <div className="container">
 
       <div className="col-lg-12 md-12">
@@ -84,7 +85,7 @@ function AllPizza() {
         </div>
 
         <div className="text-center">
-          <button type="submit" className="view-more"> View more <span><i class="ri-arrow-right-line"></i></span> </button>
+          <button type="submit" className="view-more"> View more <span><i className="ri-arrow-right-line"></i></span> </button>
         </div>
 
       </div>
