@@ -1,3 +1,6 @@
+.home-nav a:hover{
+    color: #df2020 !important;
+}
 .nav_ul  a,li nav{
     font-size: 1.05;
     color: #000 !important;

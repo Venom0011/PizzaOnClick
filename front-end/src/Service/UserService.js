@@ -3,7 +3,7 @@ import axios from 'axios';
 
 class UserService{
 
-    getAllProducts(){
+    getAllUsers(){
         return axios.get('/users')
     }
 }

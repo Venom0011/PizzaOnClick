@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assests/images/res-logo.png';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../style/Navbar.css';
 
 
@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
-  <div className="container py-3">
+  <div className="container py-3 home-nav" >
   <NavLink to='/home' className="navbar-brand">
       <img src={Logo} alt="Logo" width="30" height="30" className="d-inline-block align-text-top mx-2"/>
       PizzaOnClick

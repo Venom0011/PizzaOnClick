@@ -5,7 +5,7 @@ import UserService from "../../Service/UserService";
 function Users() {
   const [user, setuser] = useState([]);
   const fetchData = () => {
-    UserService.getAllProducts()
+    UserService.getAllUsers()
       .then((result) => {
         setuser([...result.data]);
       })

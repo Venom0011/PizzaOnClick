@@ -13,9 +13,7 @@ axios.defaults.baseURL='http://localhost:8080/pizzaonclick';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    
-   
+    <App /> 
   </React.StrictMode>
 );
 
