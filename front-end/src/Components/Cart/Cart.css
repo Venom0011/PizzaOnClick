@@ -1,0 +1,33 @@
+.input-count{
+    width: 6rem; 
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+thead th,tbody tr{
+    text-align: center;
+}
+
+.addbtn,.subbtn{
+    padding: 2px;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    background: #df2020;
+    border: none;
+}
+.quantity-grp{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+}
+.empty-cart{
+    margin-top: 20px;
+    text-align: center;
+}
+a .home{
+    text-decoration: none;
+}
+

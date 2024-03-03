@@ -1,6 +1,11 @@
 .home-nav a:hover{
     color: #df2020 !important;
 }
+
+/* #home-active .active{
+    background-color: #1dded8;
+} */
+
 .nav_ul  a,li nav{
     font-size: 1.05;
     color: #000 !important;
@@ -21,5 +26,28 @@
 }
 .nav_icons li{
     padding: 0.0 0.9rem;
+}
+
+.cart-badge{
+    position: absolute;
+    top: 25px;
+    background: #df2020;
+    color: #fff;
+    width: 15px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;  */
+}
+
+@media (max-width: 992px) {
+    .cart-badge{
+        position: absolute;
+        top: auto;
+    }
 }
 

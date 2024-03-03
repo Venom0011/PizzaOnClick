@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../style/AllPizza.css";
+import {CartContext} from "../Components/Context/CartContextProvider";
 import PizzaService from "../Service/PizzaService";
-
 function AllPizza() {
 
+// calling the addToCart function from context
+  const {addToCart,cartItems}=useContext(CartContext)
+  
   const [pizza,setPizza]=useState([]);
+
+  // get All pizza
   const fetchData=()=>{
     PizzaService.getAllPizza().then((result)=>{
-        setPizza([...result.data]);
+        setPizza([...result.data]);  
     }).catch((err)=>{
       console.log(err);
     })
@@ -16,7 +21,25 @@ useEffect(() => {
   fetchData();
 }, [])
 
+// get pizza by Id
+const getPizzaById=(id)=>{
+  PizzaService.getPizzaById(id).then((result)=>{
+   
+    if(!localStorage.getItem("pizza")){
+      localStorage.setItem("pizza","[]");
+    }
+    const selectPizza={...result.data}
+    let cart = JSON.parse(localStorage.getItem("pizza")) || []
+    console.log(result.data)
+    cart.push(selectPizza);
 
+    localStorage.setItem("pizza",JSON.stringify(cart));
+
+
+  }).catch((err)=>{
+    console.log(err);
+  })
+}
   return (
     <>
     
@@ -29,9 +52,13 @@ useEffect(() => {
           
         {
             pizza.map(p=>
-          <div className="col mb-4">
-           
-             <div className="card" key={p.id}>
+              <div className="col mb-4" key={p.id}>
+              
+                <div className="card">
+              
+              {/* storing the single pizza count using cartItems */}
+              
+
               {/* adding image to public folder and accessing the image path name by popping the location till you get fileName */}
              <img  src={`./pizzaImg/${p.pizzaImagePath.split('/').pop()}`} className="card-img mx-auto d-block" alt="..." />
 
@@ -45,7 +72,11 @@ useEffect(() => {
            </div>
            <div className="card-footer d-flex align-items-center justify-content-between">
              <span className="price">₹{p.pizzaPrice} </span>
-             <button className="add_to_cart">Add to cart</button>
+             
+             <button className="add_to_cart" onClick={()=>addToCart(p.id)}>
+              Add to cart {cartItems[p.id]>0 && <>({cartItems[p.id]})</>}
+              </button>
+             
            </div>
          </div>
             

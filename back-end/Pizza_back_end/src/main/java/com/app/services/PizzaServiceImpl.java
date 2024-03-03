@@ -60,6 +60,12 @@ public class PizzaServiceImpl implements PizzaService
 		return pizzaDao.findAll().stream().map(p->mapper.map(p, PizzaRespDto.class)).collect(Collectors.toList());
 			
 	}
+	
+	@Override
+	public PizzaRespDto getPizzaById(Integer id) {
+		Pizza pizza=pizzaDao.findById(id).orElseThrow(()->new CustomExp("Invalid Id"));
+		return mapper.map(pizza, PizzaRespDto.class);
+	}
 
 	/*@Override
 	public String addPizzaWithImage(PizzaReqDto pizzaDto, MultipartFile image) {

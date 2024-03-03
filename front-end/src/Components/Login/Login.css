@@ -1,0 +1,41 @@
+
+.login-btn{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    height: 55px;
+}
+.heading h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.login-from{
+    height: 55px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.img-signin{
+    height: 35rem;
+    width: 35rem;
+    margin-left: 5rem;
+    margin-top:2rem;
+}
+
+form input {
+   margin-top: 15px; 
+   margin-bottom: 15px; 
+
+}
+.form-container{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+
+}
+
+.home-nav{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}

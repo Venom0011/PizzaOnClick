@@ -8,13 +8,15 @@ import com.app.dto.PizzaRespDto;
 public interface PizzaService 
 {
 	
-	public PizzaReqDto addNewPizzaWithImage(PizzaReqDto dto);
+	 PizzaReqDto addNewPizzaWithImage(PizzaReqDto dto);
 	
-	public String deletePizza(Integer pizzaId);
+	 String deletePizza(Integer pizzaId);
 	
-	public String updatePizza(Integer pizzaId, PizzaReqDto pizzaDto);
+	 String updatePizza(Integer pizzaId, PizzaReqDto pizzaDto);
 	
-	public List<PizzaRespDto> getAllPizza();
+	 List<PizzaRespDto> getAllPizza();
+	
+	 PizzaRespDto getPizzaById(Integer id);
 	
 	//public String addPizzaWithImage(PizzaReqDto pizzaDto, MultipartFile image);
 }

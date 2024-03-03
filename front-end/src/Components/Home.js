@@ -3,8 +3,8 @@ import animation from '../assests/images/hero.png'
 import '../style/Home.css'
 import { Link } from 'react-router-dom'
 import AllPizza from './AllPizza'
-import Footer from './Footer'
 import About from './About'
+import Footer from './Footer'
 function Home() {
   
   return (
@@ -55,6 +55,7 @@ function Home() {
 <section>
       <About></About>
 </section>
+
 <Footer></Footer>
     </>
   )

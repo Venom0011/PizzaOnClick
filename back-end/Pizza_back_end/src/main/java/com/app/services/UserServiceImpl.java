@@ -7,32 +7,29 @@ import javax.transaction.Transactional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.app.custom_exp.CustomExp;
 import com.app.dao.UserDao;
 import com.app.dto.ApiResponse;
-import com.app.dto.UserReqDto;
 import com.app.dto.UserRespDto;
 import com.app.pojos.User;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService,UserDetailsService {
 
 	@Autowired
-	UserDao userdao;
+	private UserDao userdao;
 
+	
 	@Autowired
-	ModelMapper mapper;
+	private ModelMapper mapper;
 
-	@Override
-	public UserRespDto addUser(UserReqDto userdto) {
-
-		User user = mapper.map(userdto, User.class);
-		user = userdao.save(user);
-		return mapper.map(user, UserRespDto.class);
-	}
 
 	@Override
 	public List<UserRespDto> getAllUsers() {
@@ -57,6 +54,12 @@ public class UserServiceImpl implements UserService {
 		mapper.map(userdto, user);
 		userdao.save(user);
 		return mapper.map(user, UserRespDto.class);
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		return userdao.findByEmail(username).orElseThrow(()->new CustomExp("User not found"));
 	}
 
 }
