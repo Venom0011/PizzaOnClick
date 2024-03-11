@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# PizzaOnClick <img src="front-end/src/assests/images/res-logo.png" alt="PizzaOnClick Logo" width="50" height="50">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+PizzaOnClick is an innovative platform designed to provide customers with the ultimate pizza ordering experience. With a user-friendly interface, customers can easily browse through a wide range of delicious pizzas and place orders effortlessly. The platform caters to all tastes, offering both classic flavors and creative inventions to satisfy every craving.
 
-In the project directory, you can run:
+One of the standout features of PizzaOnClick is its efficient delivery management system. Administrators have access to an easy-to-use admin panel where they can manage users, update the menu with new products, and efficiently handle delivery assignments. This ensures that customers receive their piping-hot pizzas in no time, enhancing their overall satisfaction.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User-friendly interface for seamless pizza browsing and ordering.
+- Efficient delivery management system to handle delivery assignments and ensure timely deliveries.
+- Easy-to-use admin panel for administrators to manage users and update the menu with new products.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To get started with PizzaOnClick, simply clone the repository and follow the installation instructions in the README file. You can then run the application locally to start exploring the features and functionalities.
+## Home Page
+![image](https://github.com/Venom0011/PizzaOnClick/assets/87688288/7ca4a312-00f3-4b2a-8bc3-fbb771563236)
+![image](https://github.com/Venom0011/PizzaOnClick/assets/87688288/fc426326-6bf7-483c-b69c-14960f7e9965)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Cart Page
+![image](https://github.com/Venom0011/PizzaOnClick/assets/87688288/3f8bd604-cab3-4866-b477-42b716289f57)
 
-### `npm run build`
+## Admin Page
+![image](https://github.com/Venom0011/PizzaOnClick/assets/87688288/dfa65132-599d-4e58-916b-ad76238a23ad)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Java
+- Spring Boot
+- ReactJS
+- MySQL
 
-### `npm run eject`
+## Contributors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Abhishek Mahajan
+- Hrushikesh Turkane
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
