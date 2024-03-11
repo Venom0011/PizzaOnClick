@@ -1,4 +1,4 @@
-# PizzaOnClick <img src="front-end/src/assests/images/res-logo.png" alt="PizzaOnClick Logo" width="50" height="50">
+## <img src="front-end/src/assests/images/res-logo.png" alt="PizzaOnClick Logo" width="50" height="50"> PizzaOnClick 
 
 ## Description
 
