@@ -14,7 +14,15 @@ One of the standout features of PizzaOnClick is its efficient delivery managemen
 
 ## Getting Started
 
-To get started with PizzaOnClick, simply clone the repository and follow the installation instructions in the README file. You can then run the application locally to start exploring the features and functionalities.
+To get started with PizzaOnClick, simply clone the repository and follow the installation instructions below. You can then run the application locally to start exploring the features and functionalities.
+
+### Installation Requirements:
+- **Node.js** (latest version) installed on your system
+- **React.js** installed
+- **MySQL** running
+- **Java JDK 11** or above
+- **STS** (Spring Tool Suite) or **IntelliJ IDEA** to run the Spring Boot project
+  
 ## Home Page
 ![image](https://github.com/Venom0011/PizzaOnClick/assets/87688288/7ca4a312-00f3-4b2a-8bc3-fbb771563236)
 ![image](https://github.com/Venom0011/PizzaOnClick/assets/87688288/fc426326-6bf7-483c-b69c-14960f7e9965)
